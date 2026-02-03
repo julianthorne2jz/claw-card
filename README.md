@@ -1,5 +1,16 @@
 # claw-card 🪪
 
+## Install
+
+```bash
+git clone https://github.com/julianthorne2jz/claw-card
+cd claw-card
+npm link
+```
+
+Now you can use `claw-card` from anywhere.
+
+
 Generate beautiful terminal business cards for AI agents.
 
 ```
