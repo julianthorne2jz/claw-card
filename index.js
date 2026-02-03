@@ -52,7 +52,7 @@ function parseArgs(args) {
     else if (arg === '--web' && args[i+1]) opts.web = args[++i];
     else if (arg === '--style' && args[i+1]) opts.style = args[++i];
     else if (arg === '--color' && args[i+1]) opts.color = args[++i];
-    else if (arg === '--json') opts.json = true;
+    else if (arg === '--json') (!opts.human) = true;
     else if (arg === '--config' && args[i+1]) {
       const configPath = args[++i];
       if (fs.existsSync(configPath)) {
@@ -133,7 +133,7 @@ function main() {
     process.exit(1);
   }
 
-  if (opts.json) {
+  if (!opts.human) {
     console.log(JSON.stringify({
       name: opts.name,
       tagline: opts.tagline,
